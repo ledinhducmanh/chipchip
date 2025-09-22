@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chân Gà Sốt Cay ChipChip - Ngon Khó Cưỡng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .spicy-gradient { background: linear-gradient(135deg, #ff6b35, #f7931e, #ff4757); }
+        .food-shadow { box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3); }
+    </style>
+</head>
+<body class="bg-orange-50">
+    <!-- Header -->
+    <header class="spicy-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="text-4xl">🔥</div>
+                    <h1 class="text-2xl font-bold">Chân Gà Sốt Cay</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-lg">📞 0123.456.789</span>
+                    <div id="cart-icon" class="relative cursor-pointer bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                        <span class="text-lg">🛒</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="spicy-gradient text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-4">Chân Gà Sốt Cay Đặc Biệt</h2>
+            <p class="text-xl mb-8">Vị cay nồng, thơm ngon khó cưỡng - Giao hàng tận nơi</p>
+            <div class="text-6xl mb-6">🍗🌶️</div>
+            <button onclick="scrollToMenu()" class="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-orange-100 transition-all transform hover:scale-105">
+                Đặt Ngay
+            </button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center text-gray-800 mb-12">Thực Đơn Đặc Biệt</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Chân gà sốt cay -->
+                <div class="bg-white rounded-2xl food-shadow overflow-hidden transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-br from-red-400 to-orange-500 h-48 flex items-center justify-center">
+                        <div class="text-6xl">🍗🔥</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Chân Gà Sốt Cay Đặc Biệt</h4>
+                        <p class="text-gray-600 mb-4">Chân gà tươi ngon, sốt cay đậm đà, gia vị bí mật</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-600">45.000đ</span>
+                            <button onclick="addToCart('Chân Gà Sốt Cay Đặc Biệt', 45000)" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chân gà sốt cay vừa -->
+                <div class="bg-white rounded-2xl food-shadow overflow-hidden transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-br from-yellow-400 to-orange-400 h-48 flex items-center justify-center">
+                        <div class="text-6xl">🍗🌶️</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Chân Gà Sốt Cay Vừa</h4>
+                        <p class="text-gray-600 mb-4">Độ cay vừa phải, phù hợp mọi lứa tuổi</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-600">40.000đ</span>
+                            <button onclick="addToCart('Chân Gà Sốt Cay Vừa', 40000)" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo chân gà -->
+                <div class="bg-white rounded-2xl food-shadow overflow-hidden transform hover:scale-105 transition-all">
+                    <div class="bg-gradient-to-br from-purple-400 to-red-500 h-48 flex items-center justify-center">
+                        <div class="text-6xl">🍗🍗</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Combo 2 Chân Gà + Nước</h4>
+                        <p class="text-gray-600 mb-4">2 chân gà sốt cay + 1 nước ngọt</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-orange-600">85.000đ</span>
+                            <button onclick="addToCart('Combo 2 Chân Gà + Nước', 85000)" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="py-16 bg-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl food-shadow p-8">
+                <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Đặt Hàng Ngay</h3>
+                
+                <div id="cart-items" class="mb-6">
+                    <p class="text-gray-500 text-center">Giỏ hàng trống. Hãy chọn món ăn bên trên!</p>
+                </div>
+
+                <form id="order-form" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Họ và tên *</label>
+                        <input type="text" id="customer-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Số điện thoại *</label>
+                        <input type="tel" id="customer-phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Địa chỉ giao hàng *</label>
+                        <textarea id="customer-address" required rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"></textarea>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Ghi chú</label>
+                        <textarea id="order-note" rows="2" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500" placeholder="Yêu cầu đặc biệt..."></textarea>
+                    </div>
+
+                    <div class="bg-orange-100 p-4 rounded-lg">
+                        <div class="flex justify-between items-center text-lg font-semibold">
+                            <span>Tổng cộng:</span>
+                            <span id="total-price" class="text-orange-600">0đ</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full spicy-gradient text-white py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity">
+                        Xác Nhận Đặt Hàng 🔥
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4">
+                <h4 class="text-xl font-bold mb-2">🔥 Chân Gà Sốt Cay</h4>
+                <p>Địa chỉ: 123 Đường ABC, Quận XYZ, TP.HCM</p>
+                <p>Hotline: 0123.456.789</p>
+                <p>Giờ mở cửa: 10:00 - 22:00 hàng ngày</p>
+            </div>
+            <div class="border-t border-gray-600 pt-4">
+                <p>&copy; 2024 Chân Gà Sốt Cay. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
+            <div class="text-6xl mb-4">✅</div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Đặt Hàng Thành Công!</h3>
+            <p class="text-gray-600 mb-6">Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ liên hệ xác nhận trong vòng 5 phút.</p>
+            <button onclick="closeModal()" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors">
+                Đóng
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(itemName, price) {
+            const existingItem = cart.find(item => item.name === itemName);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: itemName,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            updateCartDisplay();
+            
+            // Animation effect
+            const cartIcon = document.getElementById('cart-icon');
+            cartIcon.classList.add('animate-bounce');
+            setTimeout(() => cartIcon.classList.remove('animate-bounce'), 500);
+        }
+
+        function removeFromCart(itemName) {
+            const itemIndex = cart.findIndex(item => item.name === itemName);
+            if (itemIndex > -1) {
+                if (cart[itemIndex].quantity > 1) {
+                    cart[itemIndex].quantity -= 1;
+                } else {
+                    cart.splice(itemIndex, 1);
+                }
+            }
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const totalPrice = document.getElementById('total-price');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            cartCount.textContent = totalItems;
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-gray-500 text-center">Giỏ hàng trống. Hãy chọn món ăn bên trên!</p>';
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="flex justify-between items-center py-2 border-b">
+                        <div>
+                            <span class="font-semibold">${item.name}</span>
+                            <span class="text-gray-600"> x${item.quantity}</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-orange-600 font-semibold">${(item.price * item.quantity).toLocaleString()}đ</span>
+                            <button onclick="removeFromCart('${item.name}')" class="text-red-500 hover:text-red-700">
+                                ❌
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            totalPrice.textContent = total.toLocaleString() + 'đ';
+        }
+
+        function scrollToMenu() {
+            document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+            document.getElementById('success-modal').classList.remove('flex');
+        }
+
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (cart.length === 0) {
+                alert('Vui lòng chọn ít nhất một món ăn!');
+                return;
+            }
+            
+            const name = document.getElementById('customer-name').value;
+            const phone = document.getElementById('customer-phone').value;
+            const address = document.getElementById('customer-address').value;
+            
+            if (!name || !phone || !address) {
+                alert('Vui lòng điền đầy đủ thông tin bắt buộc!');
+                return;
+            }
+            
+            // Show success modal
+            document.getElementById('success-modal').classList.remove('hidden');
+            document.getElementById('success-modal').classList.add('flex');
+            
+            // Reset form and cart
+            cart = [];
+            total = 0;
+            updateCartDisplay();
+            this.reset();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9830bb5b2285fe1d',t:'MTc1ODUzMjg4NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
