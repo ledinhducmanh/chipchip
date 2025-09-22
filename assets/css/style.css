@@ -1,0 +1,18 @@
+.logo {
+    height: 50px;
+    width: 50px;
+}
+.chip {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.chip-1 {
+    background-image: url("../img/1.jpg") !important;
+}
+.chip-2 {
+    background-image: url("../img/2.jpg") !important;
+}
+.chip-3 {
+    background-image: url("../img/3.jpg") !important;
+}

@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chân Gà Sốt Cay ChipChip - Ngon Khó Cưỡng</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .spicy-gradient { background: linear-gradient(135deg, #ff6b35, #f7931e, #ff4757); }
         .food-shadow { box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3); }
     </style>
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
 </head>
 <body class="bg-orange-50">
     <!-- Header -->
@@ -18,8 +20,10 @@
         <div class="container mx-auto px-4 py-6">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <div class="text-4xl">🔥</div>
-                    <h1 class="text-2xl font-bold">Chân Gà Sốt Cay</h1>
+                    <div class="text-4xl">
+                        <img class="logo" src="./assets/img/logo.png" alt="">
+                    </div>
+                    <h1 class="text-2xl font-bold">ChipChip</h1>
                 </div>
                 <div class="flex items-center space-x-4">
                     <span class="text-lg">📞 0123.456.789</span>
@@ -52,8 +56,8 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Chân gà sốt cay -->
                 <div class="bg-white rounded-2xl food-shadow overflow-hidden transform hover:scale-105 transition-all">
-                    <div class="bg-gradient-to-br from-red-400 to-orange-500 h-48 flex items-center justify-center">
-                        <div class="text-6xl">🍗🔥</div>
+                    <div class="chip chip-1 bg-gradient-to-br from-red-400 to-orange-500 h-48 flex items-center justify-center">
+                        
                     </div>
                     <div class="p-6">
                         <h4 class="text-xl font-bold text-gray-800 mb-2">Chân Gà Sốt Cay Đặc Biệt</h4>
@@ -69,8 +73,8 @@
 
                 <!-- Chân gà sốt cay vừa -->
                 <div class="bg-white rounded-2xl food-shadow overflow-hidden transform hover:scale-105 transition-all">
-                    <div class="bg-gradient-to-br from-yellow-400 to-orange-400 h-48 flex items-center justify-center">
-                        <div class="text-6xl">🍗🌶️</div>
+                    <div class="chip chip-2 bg-gradient-to-br from-yellow-400 to-orange-400 h-48 flex items-center justify-center">
+
                     </div>
                     <div class="p-6">
                         <h4 class="text-xl font-bold text-gray-800 mb-2">Chân Gà Sốt Cay Vừa</h4>
@@ -86,8 +90,8 @@
 
                 <!-- Combo chân gà -->
                 <div class="bg-white rounded-2xl food-shadow overflow-hidden transform hover:scale-105 transition-all">
-                    <div class="bg-gradient-to-br from-purple-400 to-red-500 h-48 flex items-center justify-center">
-                        <div class="text-6xl">🍗🍗</div>
+                    <div class="chip chip-3 bg-gradient-to-br from-purple-400 to-red-500 h-48 flex items-center justify-center">
+
                     </div>
                     <div class="p-6">
                         <h4 class="text-xl font-bold text-gray-800 mb-2">Combo 2 Chân Gà + Nước</h4>
