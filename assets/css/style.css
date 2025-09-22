@@ -3,8 +3,8 @@
     width: 50px;
 }
 .chip {
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center !important;
     background-repeat: no-repeat;
 }
 .chip-1 {
@@ -15,4 +15,7 @@
 }
 .chip-3 {
     background-image: url("../img/3.jpg") !important;
+}
+.banner {
+    background-image: url("../img/banner.jpg") !important;
 }
